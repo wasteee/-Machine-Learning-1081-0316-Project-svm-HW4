@@ -4,7 +4,7 @@ rules base -> ml_play_template.py <br />
 level 1 pass rate 100%  <br />
 level 2 pass rate 100%  <br />
 level 3 pass rate 100%  <br />
-level 4 pass rate 70%  <br />
+level 4 pass rate 80%  <br />
 <br />
 algorithm:  <br />
 while(alive):  <br />
