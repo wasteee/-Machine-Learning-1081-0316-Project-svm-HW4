@@ -8,50 +8,7 @@ from games.arkanoid.communication import ( \
 )
 
 np.set_printoptions(threshold=np.inf)
-#
-#def bricks_filter(brickslist,up,left,ball_x,ball_y):
-#    k = len(brickslist)
-#    if(up == 1):
-#        if(left ==1):
-#            #U.L
-#            for i in range(len(brickslist)):
-#                if(brickslist[i][0]>ball_x):
-#                    brickslist.remove(brickslist[i])
-#                    print('del')
-#                if(brickslist[i][1]<ball_y):
-#                    brickslist.remove(brickslist[i])
-#                    print('del')
-#                    
-#        else:
-#            #U.R
-#            for i in range(len(brickslist)):
-#                if(brickslist[i][0]<ball_x):
-#                    brickslist.remove(brickslist[i])
-#                    print('del')
-#                if(brickslist[i][1]<ball_y):
-#                    brickslist.remove(brickslist[i])
-#                    print('del')
-#    else:
-#        if(left ==1):
-#            #D.L
-#            for i in range(len(brickslist)):
-#                if(brickslist[i][0]>ball_x):
-#                    brickslist.remove(brickslist[i])
-#                    print('del')
-#                if(brickslist[i][1]>ball_y):
-#                    brickslist.remove(brickslist[i])
-#                    print('del')
-#        else:
-#            #D.R
-#            for i in range(k):
-#                if(brickslist[i][0]<ball_x):
-#                    brickslist.remove(brickslist[i])
-#                    k = len(brickslist)
-#                    print('del')
-#                if(brickslist[i][1]>ball_y):
-#                    brickslist.remove(brickslist[i])
-#                    print('del')
-#    return brickslist
+
 
 def ml_loop():
     """The main loop of the machine learning process
@@ -273,8 +230,7 @@ def ml_loop():
         # 3.3. Put the code here to handle the scene information
 
         # 3.4. Send the instruction for this frame to the game process
-        
-#        if(int(ball_location[1]) - int(last_ball_location[1]) > 0):
+
         next_x = next_x - next_x%5
 #        if(j == 150 and k == 189):
 #            next_x = 155
@@ -286,13 +242,7 @@ def ml_loop():
             comm.send_instruction(scene_info.frame, PlatformAction.MOVE_RIGHT)
         else:
             comm.send_instruction(scene_info.frame, PlatformAction.NONE)
-#        else:
-#            if(left == 1):
-#                comm.send_instruction(scene_info.frame, PlatformAction.MOVE_LEFT)
-#            elif(left == 0):
-#                comm.send_instruction(scene_info.frame, PlatformAction.MOVE_RIGHT)
-#            else:
-#                comm.send_instruction(scene_info.frame, PlatformAction.NONE)
+
                 
     
             
