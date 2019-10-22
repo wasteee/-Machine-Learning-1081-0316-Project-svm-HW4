@@ -6,7 +6,7 @@ level 2 pass rate 100%  <br />
 level 3 pass rate 100%  <br />
 level 4 pass rate 70%  <br />
 <br />
-alogrithm:  <br />
+algorithm:  <br />
 while(alive):  <br />
 &nbsp;&nbsp;if ball is dowing:  <br />
 &nbsp;&nbsp;&nbsp;&nbsp;calculate the next x of ball  <br />
