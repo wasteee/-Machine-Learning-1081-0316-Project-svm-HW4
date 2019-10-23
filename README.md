@@ -1,6 +1,6 @@
 # -Machine-Learning-1081-0316-Project-svm-HW4
 <br />
-#  rules base -> ml_play_template.py <br />
+rules base -> ml_play_template.py <br />
 level 1 pass rate 100%  <br />
 level 2 pass rate 100%  <br />
 level 3 pass rate 100%  <br />
@@ -20,7 +20,7 @@ while(alive):  <br />
 &nbsp;&nbsp;move the platform to the next x   <br />
 <br />
 <br />
-#  SVM Training -> svr_1022.py
+SVM Training -> svr_1022.py
 <br />
 level 1 pass rate 95%  <br />
 level 2 pass rate 95%  <br />
