@@ -10,13 +10,13 @@ algorithm:  <br />
 while(alive){  <br />
 &nbsp;&nbsp;if ball is dowing{  <br />
 &nbsp;&nbsp;&nbsp;&nbsp;calculate the next x of ball  <br />
-&nbsp;&nbsp;&nbsp;&nbsp;if ball will hit the brick and going down}  <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;calculate the  next x after the ball bounces  <br />
-&nbsp;&nbsp;}}else{  <br />
+&nbsp;&nbsp;&nbsp;&nbsp;if ball will hit the brick and going down{  <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;calculate the  next x after the ball bounces}  <br />
+&nbsp;&nbsp;}else{  <br />
 &nbsp;&nbsp;#ball is upping  <br />
 &nbsp;&nbsp;&nbsp;&nbsp;if ball will hit the brick and going down{  <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;calculate the  next x after the ball bounces 
- <br />}}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;calculate the  next x after the ball bounces }
+ <br />}
  &nbsp;&nbsp;move the platform to the next x   <br />
 }
 <br />
