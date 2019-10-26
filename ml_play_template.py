@@ -30,16 +30,19 @@ def ml_loop():
     bricks = []
     hit = False
     comm.ml_ready()
+    
     # 3. Start an endless loop.
     while True:
+
         # 3.1. Receive the scene information sent from the game process.
         scene_info = comm.get_scene_info()
-		
 		
         # 3.2. If the game is over or passed, the game process will reset
         #      the scene and wait for ml process doing resetting job.
         if scene_info.status == GameStatus.GAME_OVER or \
             scene_info.status == GameStatus.GAME_PASS:
+            if scene_info.status == GameStatus.GAME_OVER:
+                m = 10/0
             # Do some stuff if needed
             # 3.2.1. Inform the game process that ml process is ready
             comm.ml_ready()
@@ -96,7 +99,7 @@ def ml_loop():
                     hit = False
                 if(hit==False):
                     j = ball_location[0]+3
-                    k = ball_location[1]-3
+                    k = ball_location[1]+3
                     while(j < 200 and k < 400):
                         if(table[j][k] == 1):
                             hit = True
@@ -109,7 +112,7 @@ def ml_loop():
                     print(j,k)
                     if(table[j-1][k]==0):
                         if(j+k < 400):
-                            next_x = 400-(j+k)
+                            next_x = k-j
                         else:
                             next_x = j+k -400
 #                    
@@ -142,7 +145,7 @@ def ml_loop():
                         if(200-j+k < 400):
                             next_x = k-j
                         else:
-                            next_x = 400-j+k
+                            next_x = 400-k+j
 
 #                    if(hit):
 #                        print('hit222')
@@ -156,7 +159,7 @@ def ml_loop():
         else:
             if(int(ball_location[0]) > int(last_ball_location[0]) ):
                 #U.R
-                j = ball_location[0]
+                j = ball_location[0]+3
                 k = ball_location[1]
                 while(j < 200 and k > 0):
                     
@@ -169,8 +172,8 @@ def ml_loop():
                         
                         
                 if(hit==False):
-                    j = ball_location[0]
-                    k = ball_location[1]-3
+                    j = ball_location[0]+3
+                    k = ball_location[1]+3
                     while(j < 200 and k > 0):
                         if(table[j][k] == 1):
                             hit = True
@@ -186,14 +189,14 @@ def ml_loop():
                         if(200-j+k < 400):
                             next_x = k-j
                         else:
-                            next_x = 400-j+k
+                            next_x = 400-k+j
                         
               
 
             else:
                 #U.L
                 j = ball_location[0]
-                k = ball_location[1] - 3
+                k = ball_location[1]
                 while(j > 0 and k > 0):
                     if(table[j][k] == 1):
                         hit = True
@@ -202,8 +205,8 @@ def ml_loop():
                     k = k-1
                     hit = False
                 if(hit==False):
-                    j = ball_location[0]+3
-                    k = ball_location[1]-3
+                    j = ball_location[0]
+                    k = ball_location[1]+3
                     while(j > 0 and k > 0):
                         if(table[j][k] == 1):
                             hit = True
@@ -220,6 +223,8 @@ def ml_loop():
                             next_x = 400-(j+k)
                         else:
                             next_x = j+k -400
+                else:
+                    next_x = 100
        
                 if(next_x>200):
                     next_x = next_x - 200
@@ -230,10 +235,9 @@ def ml_loop():
         # 3.3. Put the code here to handle the scene information
 
         # 3.4. Send the instruction for this frame to the game process
-
+        
         next_x = next_x - next_x%5
-#        if(j == 150 and k == 189):
-#            next_x = 155
+
         print(next_x)
 
         if(int(plat_location[0])+20>next_x):
