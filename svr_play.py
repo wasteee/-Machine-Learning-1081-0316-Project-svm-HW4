@@ -184,14 +184,9 @@ def ml_loop():
             # 3.2.1. Inform the game process that ml process is ready
             comm.ml_ready()
             continue
-        
-            
-        
-        
+
         move = model.predict(np.around(input))
-#        next_x = move * 20
-#        next_x = next_x - next_x%5
-#        print(move)
+
     
         # 3.3. Put the code here to handle the scene information
 
