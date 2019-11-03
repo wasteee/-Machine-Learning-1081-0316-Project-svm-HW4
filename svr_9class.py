@@ -179,17 +179,10 @@ hitarray = np.array((hitarray[:-1]))
 LRUP = np.array((LRUP[:-1]))
 x = np.hstack((Ballarray,hitarray,LRUP,ball_to_plat,Plat_X[0:-1,0][:,np.newaxis]))
 
-#PlatX = np.array(PlatX)
-#new = np.hstack((x,PlatX[:,np.newaxis]))
 
 
 y = instrust 
 
-#with open('C:\\Users\\fghj8\\MLGame-master\\svr.csv', 'w', newline='') as csvfile:
-#    writer = csv.writer(csvfile)
-#    writer.writerow(['ball_x','ball_y','hit_x','hit_y','platform_x','next_x'])
-#    writer.writerows(new)
-    
 
 from sklearn.model_selection import train_test_split
 x_train,x_test,y_train,y_test = train_test_split(x,y,test_size = 0.2,random_state = 41)
