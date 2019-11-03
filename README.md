@@ -28,4 +28,4 @@ SVR training data: <br />
 &nbsp;&nbsp;Level 3 log file * 1 <br />
 &nbsp;&nbsp;Level 4 log file * 4 <br />
 &nbsp;&nbsp;total frames -> 14501 <br />
-&nbsp;&nbsp;total R^2 -> 0.6752995058622785 <br />
+&nbsp;&nbsp;R^2 -> 0.6752995058622785 <br />
