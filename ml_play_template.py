@@ -33,7 +33,6 @@ def ml_loop():
     
     # 3. Start an endless loop.
     while True:
-
         # 3.1. Receive the scene information sent from the game process.
         scene_info = comm.get_scene_info()
 		
@@ -59,8 +58,7 @@ def ml_loop():
                     table[bricks[k][0] + p][bricks[k][1] + j ] = 1
     
             
-            
-            
+
             
         delta_x = int(ball_location[0]) - int(last_ball_location[0])
         delta_y = int(ball_location[1]) - int(last_ball_location[1])
@@ -84,7 +82,6 @@ def ml_loop():
                 else:
                     next_x = next_x+400
 
-  
                 
             if(int(ball_location[0]) > int(last_ball_location[0]) ):
                     #D.R.
@@ -115,7 +112,6 @@ def ml_loop():
                             next_x = k-j
                         else:
                             next_x = j+k -400
-#                    
                     
             else:
                     #D.L
@@ -147,8 +143,6 @@ def ml_loop():
                         else:
                             next_x = 400-k+j
 
-#                    if(hit):
-#                        print('hit222')
                 
                 if(next_x>200):
                     next_x = next_x - 200
@@ -236,10 +230,8 @@ def ml_loop():
 
         # 3.4. Send the instruction for this frame to the game process
         
+
         next_x = next_x - next_x%5
-
-        print(next_x)
-
         if(int(plat_location[0])+20>next_x):
             comm.send_instruction(scene_info.frame, PlatformAction.MOVE_LEFT)
         elif(int(plat_location[0])+20<next_x):
