@@ -22,10 +22,4 @@ while(alive){  <br />
 }
 <br />
 <br />
-SVM Training -> svr_1022.py
-<br />
-level 1 pass rate 95%  <br />
-level 2 pass rate 95%  <br />
-level 3 pass rate 95%  <br />
-level 4 pass rate 0%  <br />
-            
+
