@@ -23,9 +23,9 @@ while(alive){  <br />
 <br />
 <br />
 
-SVR training data:
-&nbsp;&nbsp;Level 1 log file * 1
-&nbsp;&nbsp;Level 3 log file * 1
-&nbsp;&nbsp;Level 4 log file * 4
-&nbsp;&nbsp;total frames -> 14501
-&nbsp;&nbsp;total R^2 -> 0.6752995058622785
+SVR training data: <br />
+&nbsp;&nbsp;Level 1 log file * 1 <br />
+&nbsp;&nbsp;Level 3 log file * 1 <br />
+&nbsp;&nbsp;Level 4 log file * 4 <br />
+&nbsp;&nbsp;total frames -> 14501 <br />
+&nbsp;&nbsp;total R^2 -> 0.6752995058622785 <br />
